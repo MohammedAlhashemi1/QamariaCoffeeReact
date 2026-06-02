@@ -1,0 +1,6 @@
+@QamariaCoffeeAPI_HostAddress = http://localhost:5236
+
+GET {{QamariaCoffeeAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

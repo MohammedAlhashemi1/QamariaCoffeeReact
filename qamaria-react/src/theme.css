@@ -1,0 +1,359 @@
+/* QamariaCoffee — Shared Theme */
+
+:root {
+  --espresso:  #2C1810;
+  --roast:     #6F4E37;
+  --caramel:   #C8A97E;
+  --latte:     #E8D5B7;
+  --cream:     #F5E6D3;
+  --parchment: #FDFAF6;
+}
+
+/* ── Page Wrapper ── */
+.coffee-page {
+  min-height: 80vh;
+  background-color: var(--parchment);
+  padding: 2rem 0;
+}
+
+/* ── Page Header ── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.page-header-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.page-header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--espresso);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.page-header p {
+  margin: 0;
+  color: var(--roast);
+  font-size: 0.9rem;
+}
+
+/* ── Buttons ── */
+.btn-coffee {
+  background: linear-gradient(135deg, var(--espresso), var(--roast));
+  color: var(--cream);
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-coffee:hover  { opacity: 0.88; transform: translateY(-1px); }
+.btn-coffee:active { transform: translateY(0); }
+
+.btn-save {
+  background: linear-gradient(135deg, #1a7a4a, #239459);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-save:hover { opacity: 0.88; }
+
+.btn-edit {
+  background: transparent;
+  color: #92400e;
+  border: 1.5px solid #fcd34d;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-edit:hover { background: #fef3c7; border-color: #f59e0b; }
+
+.btn-delete {
+  background: transparent;
+  color: #b91c1c;
+  border: 1.5px solid #fca5a5;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-delete:hover { background: #fee2e2; border-color: #f87171; }
+
+.btn-cancel {
+  background: var(--cream);
+  color: var(--roast);
+  border: 1.5px solid var(--latte);
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-cancel:hover { background: var(--latte); }
+
+/* ── Form Card ── */
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.1);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--latte);
+}
+
+.form-card-header {
+  background: linear-gradient(135deg, var(--roast) 0%, var(--caramel) 100%);
+  padding: 1rem 1.5rem;
+}
+
+.form-card-header h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-body {
+  padding: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--roast);
+  margin-bottom: 0.4rem;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border: 1.5px solid var(--latte);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--espresso);
+  background: var(--parchment);
+  outline: none;
+  transition: border-color 0.15s ease;
+  appearance: auto;
+  box-sizing: border-box;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--caramel);
+  background: #fff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.7rem;
+}
+
+/* ── Data Card (table wrapper) ── */
+.data-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.09);
+  overflow: hidden;
+}
+
+.data-card-header {
+  background: linear-gradient(135deg, var(--espresso) 0%, var(--roast) 100%);
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-card-header h2 {
+  color: var(--cream);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.count-badge {
+  background: rgba(200, 169, 126, 0.3);
+  color: var(--caramel);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid rgba(200, 169, 126, 0.4);
+}
+
+/* ── Table ── */
+.data-table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.data-table thead tr {
+  background-color: var(--cream);
+}
+
+.data-table thead th {
+  padding: 0.85rem 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--roast);
+  border-bottom: 2px solid var(--latte);
+  white-space: nowrap;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid #f3ede4;
+  transition: background 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+  background-color: #fdf6ee;
+}
+
+.data-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.data-table td {
+  padding: 0.9rem 1.2rem;
+  color: var(--espresso);
+  vertical-align: middle;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ── Summary Cards ── */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  border-left: 4px solid var(--caramel);
+  box-shadow: 0 2px 8px rgba(44, 24, 16, 0.07);
+}
+
+.summary-card .s-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--roast);
+  margin-bottom: 0.3rem;
+}
+
+.summary-card .s-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--espresso);
+  line-height: 1;
+}
+
+/* ── Loading ── */
+.page-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--roast);
+}
+
+.coffee-spinner {
+  font-size: 2.5rem;
+  animation: steam 1.2s ease-in-out infinite alternate;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+@keyframes steam {
+  from { transform: translateY(0) rotate(-5deg); opacity: 0.7; }
+  to   { transform: translateY(-8px) rotate(5deg); opacity: 1; }
+}
+
+/* ── Empty State ── */
+.page-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.page-empty .empty-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+.page-empty h3 { font-size: 1.1rem; font-weight: 600; color: var(--espresso); margin-bottom: 0.4rem; }
+.page-empty p  { font-size: 0.88rem; color: var(--roast); margin: 0; }
+
+/* ── Misc Chips ── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.chip-cream  { background: var(--cream); color: var(--roast); }
+.chip-latte  { background: var(--latte); color: var(--espresso); }
+.chip-drink  { background: #dbeafe; color: #1e40af; }
+.chip-food   { background: #fef3c7; color: #92400e; }

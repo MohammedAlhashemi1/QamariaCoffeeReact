@@ -1,0 +1,11 @@
+/* Menu Items — page-specific styles */
+
+.item-price {
+  font-weight: 700;
+  color: #1a7a4a;
+}
+
+.item-description {
+  color: #888;
+  font-size: 0.85rem;
+}
